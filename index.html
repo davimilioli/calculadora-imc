@@ -10,23 +10,33 @@
 
 <body>
     <main>
-        <div class="calculadora">
+        <section class="calculadora">
             <h1 class="titulo">Calculadora IMC</h1>
             <div class="formGroup">
                 <label for="peso">Peso</label>
-                <input type="text" id="peso">
+                <input type="text" id="peso" value="80">
             </div>
             <div class="formGroup">
                 <label for="altura">Altura</label>
-                <input type="text" id="altura">
+                <input type="text" id="altura" value="1.80">
             </div>
             <div class="buttons">
                 <button class="btn" id="calcular">Calcular</button>
                 <button id="limpar" class="btn">Limpar</button>
             </div>
             <div id="resultado"></div>
-        </div>
+        </section>
+        <section>
+            <table class="tabela">
+                <tr>
+                    <th>IMC</th>
+                    <th>CLASSIFICAÇÃO</th>
+                    <th>OBESIDADE (GRAU)</th>
+                </tr>
+            </table>
+        </section>
     </main>
+    <script src="src/js/tabela.js"></script>
     <script src="src/js/index.js"></script>
 </body>
 
