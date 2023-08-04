@@ -3,15 +3,6 @@ const altura = document.querySelector('#altura');
 const resultado = document.querySelector('#resultado');
 const calcular = document.querySelector('#calcular');
 
-/*
-    Menor que 18,5 	Magreza 	0
-    Entre 18,5 e 24,9 	Normal 	0
-    Entre 25,0 e 29,9 	Sobrepeso 	I
-    Entre 30,0 e 39,9 	Obesidade 	II
-    Maior que 40,0 	Obesidade Grave 	III
-    imc = peso / altura * altura
-*/
-
 function calculoImc() {
     const pesoValue = parseFloat(peso.value);
     const alturaValue = parseFloat(altura.value);
@@ -46,7 +37,6 @@ function validacaoPeso() {
 
 function colorBorder(seletor, cor) {
     seletor.style.borderColor = cor;
-    console.log(seletor)
 }
 
 calcular.addEventListener('click', () => {
@@ -77,4 +67,21 @@ limpar.addEventListener('click', () => {
 })
 
 
+function createTable() {
+    const tableContainer = document.querySelector('.tabela')
+    data.forEach((item) => {
+        const template = `
+            <tr>
+                <td class="resultTable">${item.imc}</td>
+                <td class="resultTable">${item.classificacao}</td>
+                <td class="resultTable">${item.obesidade}</td>
+            </tr>
+        `;
 
+        tableContainer.innerHTML += template;
+    })
+
+    return tableContainer;
+}
+
+createTable();

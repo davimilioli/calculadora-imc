@@ -11,7 +11,11 @@ body {
 
 main {
     width: 1200px;
-    margin: auto;
+    margin: 10rem auto auto auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5px;
+    align-items: center;
 }
 
 input {
@@ -21,7 +25,7 @@ input {
 }
 
 .btn {
-    background-color: rgb(17, 180, 255);
+    background-color: #11b4ff;
     border: none;
     padding: 1rem;
     font-weight: 600;
@@ -37,7 +41,6 @@ input {
 }
 
 .calculadora {
-    width: 25rem;
     background-color: #FFF;
     color: #444;
     padding: 1rem;
@@ -66,4 +69,31 @@ input {
     border: 1px solid #CCC;
     padding: 1rem;
     margin-top: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #FFF;
+    height: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
 }
